@@ -1,0 +1,48 @@
+// vid 12 6.40
+@use '../../abstract/colors';
+@use '../../abstract/mixins';
+
+.label{
+    @include mixins.flexCenter;
+}
+
+.toggle__input {
+    appearance: none;
+    width: 9rem;
+    height: 5rem;
+    border: 0.1rem solid colors.$third;
+    border-bottom: 0.2rem solid colors.$logo;
+    border-right: 0.2rem solid colors.$logo;
+    border-radius: 5rem;
+    position: relative;
+    background: colors.$dark;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::after {
+        content: "";
+        height: 5rem;
+        width: 5rem;
+        position: absolute;
+        background: colors.$gradient;
+        border-radius: 50%;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        transition: 0.4s;
+    }
+
+    &:focus::after{
+        outline: 0.2 solid colors.$dark;
+    }
+
+    &:checked {
+        background: colors.$background;
+    }
+
+    &:checked::after {
+        left: 80%;
+    }
+}

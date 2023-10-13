@@ -1,0 +1,27 @@
+@use '../../abstract/colors';
+
+.darkmode__background{
+    background: colors.$gradient--darkmode;
+}
+
+.darkmode__header{
+    background: colors.$darkmode__background;
+}
+
+.darkmode__showcase{
+    background: colors.$darkmode__background;
+    box-shadow: inset 0 -1rem 2rem 0 rgb(48, 25, 59);
+}
+
+.darkmode__input{
+    background: colors.$dark;
+    color: colors.$background;
+}
+
+.darkmode__h2{
+    color: colors.$logo;
+}
+
+.darkmode__h3{
+    color: colors.$background;
+}

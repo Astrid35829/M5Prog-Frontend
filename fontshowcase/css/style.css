@@ -1,0 +1,276 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+*:focus {
+  outline: 0.2rem dashed #603178;
+}
+
+.body {
+  background: linear-gradient(to bottom right, #BEADFA, #66347F);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4rem;
+  font-family: "Rubik", sans-serif;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+.header {
+  width: 80vw;
+  max-width: 150rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F0ECE3;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  padding: 4rem;
+  animation-name: popup;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+.header__logo {
+  font-size: 200%;
+  padding: 2rem;
+  border-radius: 50%;
+  color: #F0ECE3;
+  background: linear-gradient(to bottom right, #BEADFA, #66347F);
+  border: 0.2rem transparent #BEADFA;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo:hover {
+  color: #BEADFA;
+  border: 0.2rem dashed #BEADFA;
+  background: transparent;
+  transform: rotate(360deg);
+  transition: 0.6s all;
+  transition-timing-function: linear;
+}
+.header__rightWrapper {
+  display: flex;
+  gap: 4rem;
+}
+.header__avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 0.2rem dotted #C7B198;
+  border-bottom: 0.2rem dotted #BEADFA;
+  border-right: 0.2rem dotted #BEADFA;
+}
+.header__avatar:hover {
+  transform: rotate(360deg);
+  transition: 1s all;
+  transition-timing-function: linear;
+}
+.header__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle__input {
+  appearance: none;
+  width: 9rem;
+  height: 5rem;
+  border: 0.1rem solid #C7B198;
+  border-bottom: 0.2rem solid #BEADFA;
+  border-right: 0.2rem solid #BEADFA;
+  border-radius: 5rem;
+  position: relative;
+  background: #603178;
+}
+.toggle__input:hover {
+  cursor: pointer;
+}
+.toggle__input::after {
+  content: "";
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  background: linear-gradient(to bottom right, #BEADFA, #66347F);
+  border-radius: 50%;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+}
+.toggle__input:focus::after {
+  outline: 0.2 solid #603178;
+}
+.toggle__input:checked {
+  background: #F0ECE3;
+}
+.toggle__input:checked::after {
+  left: 80%;
+}
+
+.showcase {
+  width: 80vw;
+  max-width: 150rem;
+  background: #F0ECE3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  gap: 4rem;
+  box-shadow: inset 0 -1rem 2rem 0 rgba(166, 141, 173, 0.4);
+  animation-name: popup;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+.showcase__input {
+  font-size: 100%;
+  padding: 2rem;
+  width: 50%;
+  border: none;
+  background: #DFD3C3;
+  border: 0.2rem solid #C7B198;
+  border-right: 0.2rem solid #BEADFA;
+  border-bottom: 0.2rem solid #BEADFA;
+  border-radius: 0.5rem;
+  color: #603178;
+}
+.showcase__input:focus {
+  outline: none;
+}
+.showcase__section {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.showcase__wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.showcase__font {
+  font-size: 120%;
+  font-weight: 400;
+  color: #C7B198;
+}
+.showcase__output {
+  color: #603178;
+  font-size: 250%;
+}
+.showcase__output--cursive {
+  font-weight: 400;
+  font-family: "Dancing Script", cursive;
+}
+.showcase__output--pixelify {
+  font-weight: 400;
+  font-family: "Pixelify Sans", sans-serif;
+}
+.showcase__output--tilt {
+  font-weight: 400;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+.heart {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 120%;
+  padding: 0.5rem;
+}
+.heart__logo {
+  color: #BEADFA;
+  font-size: 120%;
+}
+.heart__logo:hover {
+  cursor: pointer;
+}
+.heart__logo.fa-solid {
+  color: #BEADFA;
+}
+
+@media screen and (max-width: 62.5rem) {
+  body {
+    padding: 1rem;
+  }
+  .showcase .header {
+    width: calc(100vw - 1rem - 1rem);
+  }
+  .showcase__input {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .body {
+    font-size: 1.6rem;
+  }
+  .header {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .header__rightWrapper {
+    flex-direction: column;
+  }
+  .showcase__input {
+    width: 100%;
+  }
+}
+.darkmode__background {
+  background: linear-gradient(to bottom right, #F0ECE3, #C7B198);
+}
+
+.darkmode__header {
+  background: #452455;
+}
+
+.darkmode__showcase {
+  background: #452455;
+  box-shadow: inset 0 -1rem 2rem 0 rgb(48, 25, 59);
+}
+
+.darkmode__input {
+  background: #603178;
+  color: #F0ECE3;
+}
+
+.darkmode__h2 {
+  color: #BEADFA;
+}
+
+.darkmode__h3 {
+  color: #F0ECE3;
+}
+
+/*# sourceMappingURL=style.css.map */

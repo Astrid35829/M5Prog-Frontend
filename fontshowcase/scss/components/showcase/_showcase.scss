@@ -1,0 +1,70 @@
+@use '../../abstract/colors';
+@use '../../abstract/mixins';
+@use '../../abstract/_animations';
+
+.showcase{
+    width: 80vw;
+    max-width: 150rem;
+    background: colors.$background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    gap: 4rem;
+    box-shadow: inset 0 -1rem 2rem 0 rgba(166, 141, 173, 0.4);
+    @include animations.popup;
+
+    &__input{
+        font-size: 100%;
+        padding: 2rem;
+        width: 50%;
+        border: none;
+        background: colors.$secondair;
+        border: 0.2rem solid colors.$third;
+        border-right: 0.2rem solid colors.$logo;
+        border-bottom: 0.2rem solid colors.$logo;
+        border-radius: 0.5rem;
+        color: colors.$dark;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__section{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    &__wrapper{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__font{
+        font-size: 120%;
+        font-weight: 400; 
+        color: colors.$third;       
+    }
+
+    &__output{
+        color: colors.$dark;
+        font-size: 250%;
+
+        &--cursive{
+            @include mixins.fontCursive;
+        }
+
+        &--pixelify{
+            @include mixins.fontPixelify;
+        }
+
+        &--tilt{
+            @include mixins.fontTilt;
+        }
+    }
+}
