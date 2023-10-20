@@ -1,0 +1,9 @@
+@use 'abstract/mixins';
+@use 'abstract/colors';
+
+body{
+    @include mixins.flexCenter;
+    background: colors.$background;
+    min-height: 100vh;
+    padding: 4rem;
+}

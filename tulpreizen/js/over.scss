@@ -1,0 +1,7 @@
+@use 'colors';
+
+.over{
+    padding: 4rem;
+    height: 80rem;
+    border-bottom: 0.2rem solid colors.$highlight;
+}

@@ -1,0 +1,160 @@
+@use '../../abstract/colors';
+@use '../../abstract/mixins';
+
+.frog{
+    width: 100%;
+    height: 100%;
+    @include mixins.flexCenter;
+    position: relative;
+    
+    &__body{
+        height: 16rem;
+        width: 25rem;
+        background: colors.$frog__body;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    &__eyeLid{
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        background: colors.$frog__body;
+        position: absolute;
+        top: -10%;
+        @include mixins.flexCenter;
+        
+        &--left{
+            left: 20%
+        }
+
+        &--right{
+            right: 20%;
+        }
+    }
+
+    &__eyeBall{
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        background: colors.$frog__eye--white;
+        @include mixins.flexCenter;
+
+        &Pupil{
+            width: 4rem;
+            height: 2rem;
+            background: colors.$frog__pupil;
+            border-radius: 50%;
+        }
+    }
+
+    &__belly{
+        height: 8rem;
+        width: 15rem;
+        background: colors.$frog__belly;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 5%;
+        left: 19%;
+    }
+
+    &__mouthTongue{
+        height: 5rem;
+        width: 4rem;
+        border-radius: 50%;
+        background: colors.$frog__tongue;
+        box-shadow: 0 0.8rem 1rem 0 colors.$frog__shadow;
+        position: absolute;
+        top: 25%;
+        left: 43%;
+    }
+
+    &__mouthLip{
+        height: 2.8rem;
+        width: 5rem;
+        background: colors.$frog__body;
+        position: absolute;
+        top: 25%;
+        left: 40.8%;
+        border-bottom: 0.3rem solid colors.$frog__mouth;
+    }
+    
+
+    &__backLeg{
+        height: 13rem;
+        width: 6rem;
+        background: colors.$frog__backLeg;
+        border-radius: 50%;
+        position: absolute;
+        top: 35%;
+
+        &--left{
+            left: 20%;
+            transform: rotate(155deg);
+        }
+
+        &--right{
+            right: 20%;
+            transform: rotate(-155deg);
+        }
+    }
+
+    &__backFoot{
+        height: 4rem;
+        width: 3rem;
+        border-radius: 50%;
+        background: colors.$frog__backLeg;
+        position: absolute;
+        top: -10%;
+        
+        &--left{
+            transform: rotate(-90deg);
+            left: 65%;
+        }
+
+        &--right{
+            transform: rotate(90deg);
+            right:65%;
+        }
+    }
+
+    &__frontLeg{
+        height: 7rem;
+        width: 3rem;
+        border-radius: 50%;
+        background: colors.$frog__frontLeg;
+        position: absolute;
+        top: 60%;
+
+        &--left{
+            left: 15%;
+            transform: rotate(155deg);
+        }
+
+        &--right{
+            right: 15%;
+            transform: rotate(-155deg);
+        }
+    }
+
+    &__frontFoot{
+        height: 2rem;
+        width: 3rem;
+        border-radius: 50%;
+        background: colors.$frog__frontLeg;
+        position: absolute;
+        top:-10%;
+
+        &--left{
+            transform: rotate(25deg);
+            left:-10%
+        }
+
+        &--right{
+            transform: rotate(-25deg);
+            right: -10%;
+        }
+    }
+
+    
+}

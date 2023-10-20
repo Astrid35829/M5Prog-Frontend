@@ -1,0 +1,308 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightyellow;
+  min-height: 100vh;
+  padding: 4rem;
+}
+
+.outerBorder {
+  height: 50rem;
+  width: 50rem;
+  background: rgb(94, 94, 192);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 4rem 0.5rem rgba(0, 0, 139, 0.4), 0 10rem 10rem 0 rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fly {
+  0% {
+    left: -5%;
+  }
+  50% {
+    left: 105%;
+  }
+  100% {
+    left: -5%;
+  }
+}
+@keyframes ripple {
+  from {
+    border: 0.3rem solid lightblue;
+  }
+  to {
+    border: none;
+  }
+}
+.ripples {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.ripples__ripple {
+  border-radius: 50%;
+  position: absolute;
+  animation-name: ripple;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+.ripples__ripple--one {
+  width: 40rem;
+  height: 12rem;
+  top: 60%;
+  left: 10%;
+}
+.ripples__ripple--two {
+  width: 50rem;
+  height: 20rem;
+  top: 50%;
+  left: 0;
+  animation-delay: 2s;
+}
+.ripples__ripple--three {
+  width: 60rem;
+  height: 27rem;
+  top: 43%;
+  left: -10%;
+  animation-delay: 4s;
+}
+.ripples__ripple--four {
+  width: 75rem;
+  height: 37rem;
+  top: 32%;
+  left: -25%;
+  animation-delay: 6s;
+}
+.ripples__ripple--five {
+  width: 110rem;
+  height: 45rem;
+  top: 20%;
+  left: -60%;
+  animation-delay: 8s;
+}
+.ripples__ripple--six {
+  width: 130rem;
+  height: 50rem;
+  top: 10%;
+  left: -80%;
+  animation-delay: 10s;
+}
+
+.leaf {
+  width: 40rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: lightgreen;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  box-shadow: 0 1rem 1rem 0 rgb(73, 73, 150);
+}
+.leaf__shadow {
+  width: 5rem;
+  height: 5rem;
+  background: rgb(73, 73, 150);
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+  transform: rotate(142deg);
+  position: absolute;
+  top: 82%;
+  left: 30%;
+}
+
+.shadow {
+  width: 30rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+.frog {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.frog__body {
+  height: 16rem;
+  width: 25rem;
+  background: rgb(24, 108, 24);
+  border-radius: 50%;
+  position: relative;
+}
+.frog__eyeLid {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background: rgb(24, 108, 24);
+  position: absolute;
+  top: -10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frog__eyeLid--left {
+  left: 20%;
+}
+.frog__eyeLid--right {
+  right: 20%;
+}
+.frog__eyeBall {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frog__eyeBallPupil {
+  width: 4rem;
+  height: 2rem;
+  background: black;
+  border-radius: 50%;
+}
+.frog__belly {
+  height: 8rem;
+  width: 15rem;
+  background: rgb(154, 210, 130);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5%;
+  left: 19%;
+}
+.frog__mouthTongue {
+  height: 5rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: rgb(212, 23, 23);
+  box-shadow: 0 0.8rem 1rem 0 rgba(7, 100, 47, 0.3);
+  position: absolute;
+  top: 25%;
+  left: 43%;
+}
+.frog__mouthLip {
+  height: 2.8rem;
+  width: 5rem;
+  background: rgb(24, 108, 24);
+  position: absolute;
+  top: 25%;
+  left: 40.8%;
+  border-bottom: 0.3rem solid rgb(4, 57, 4);
+}
+.frog__backLeg {
+  height: 13rem;
+  width: 6rem;
+  background: rgb(20, 90, 20);
+  border-radius: 50%;
+  position: absolute;
+  top: 35%;
+}
+.frog__backLeg--left {
+  left: 20%;
+  transform: rotate(155deg);
+}
+.frog__backLeg--right {
+  right: 20%;
+  transform: rotate(-155deg);
+}
+.frog__backFoot {
+  height: 4rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: rgb(20, 90, 20);
+  position: absolute;
+  top: -10%;
+}
+.frog__backFoot--left {
+  transform: rotate(-90deg);
+  left: 65%;
+}
+.frog__backFoot--right {
+  transform: rotate(90deg);
+  right: 65%;
+}
+.frog__frontLeg {
+  height: 7rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: rgb(30, 130, 30);
+  position: absolute;
+  top: 60%;
+}
+.frog__frontLeg--left {
+  left: 15%;
+  transform: rotate(155deg);
+}
+.frog__frontLeg--right {
+  right: 15%;
+  transform: rotate(-155deg);
+}
+.frog__frontFoot {
+  height: 2rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: rgb(30, 130, 30);
+  position: absolute;
+  top: -10%;
+}
+.frog__frontFoot--left {
+  transform: rotate(25deg);
+  left: -10%;
+}
+.frog__frontFoot--right {
+  transform: rotate(-25deg);
+  right: -10%;
+}
+
+.fly {
+  width: 2rem;
+  height: 1.5rem;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  animation-name: fly;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.fly__wings {
+  width: 1rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #eee;
+  position: absolute;
+  top: -80%;
+}
+.fly__wings--left {
+  left: 10%;
+  transform: rotate(145deg);
+}
+.fly__wings--right {
+  right: 10%;
+  transform: rotate(-145deg);
+}
+
+/*# sourceMappingURL=style.css.map */

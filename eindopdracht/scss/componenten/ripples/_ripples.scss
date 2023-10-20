@@ -1,0 +1,65 @@
+@use '../../abstract/colors';
+@use '../../abstract/animations';
+
+.ripples{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    &__ripple{
+        border-radius: 50%;
+        position: absolute;
+        animation-name: ripple;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        
+
+        &--one{
+            width: 40rem;
+            height: 12rem;
+            top:60%;
+            left:10%;
+            
+        }
+    
+        &--two{
+            width: 50rem;
+            height: 20rem;
+            top:50%;
+            left:0;
+            animation-delay: 2s
+        }
+
+        &--three{
+            width: 60rem;
+            height: 27rem;
+            top: 43%;
+            left: -10%;
+            animation-delay: 4s
+        }
+
+        &--four{
+            width: 75rem;
+            height: 37rem;
+            top: 32%;
+            left: -25%;
+            animation-delay: 6s
+        }   
+
+        &--five{
+            width: 110rem;
+            height: 45rem;
+            top: 20%;
+            left: -60%;
+            animation-delay: 8s
+        }
+
+        &--six{
+            width: 130rem;
+            height: 50rem;
+            top: 10%;
+            left: -80%;
+            animation-delay: 10s;
+        }
+    }
+}

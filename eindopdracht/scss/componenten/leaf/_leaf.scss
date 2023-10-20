@@ -1,0 +1,23 @@
+@use '../../abstract/colors';
+
+.leaf{
+    width: 40rem;
+    height: 15rem;
+    border-radius: 50%;
+    background: colors.$leaf;
+    position: absolute;
+    top:50%;
+    left:10%;
+    box-shadow: 0 1rem 1rem 0 colors.$leaf__shadow;
+
+    &__shadow{
+        width: 5rem;
+        height: 5rem;
+        background: colors.$leaf__shadow;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+        transform: rotate(142deg);
+        position: absolute;
+        top: 82%;
+        left: 30%;
+    }
+}
