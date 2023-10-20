@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: lightyellow;
+  background: linear-gradient(lightyellow, lightpink, lightcoral);
   min-height: 100vh;
   padding: 4rem;
 }
@@ -24,7 +24,7 @@ body {
 .outerBorder {
   height: 50rem;
   width: 50rem;
-  background: rgb(94, 94, 192);
+  background: rgb(116, 116, 230);
   border-radius: 50%;
   position: relative;
   overflow: hidden;
@@ -112,12 +112,12 @@ body {
   position: absolute;
   top: 50%;
   left: 10%;
-  box-shadow: 0 1rem 1rem 0 rgb(73, 73, 150);
+  box-shadow: 0 1rem 1rem 0 rgb(91, 91, 185);
 }
 .leaf__shadow {
   width: 5rem;
   height: 5rem;
-  background: rgb(73, 73, 150);
+  background: rgb(91, 91, 185);
   clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
   transform: rotate(142deg);
   position: absolute;
@@ -185,7 +185,7 @@ body {
 .frog__belly {
   height: 8rem;
   width: 15rem;
-  background: rgb(154, 210, 130);
+  background: linear-gradient(rgb(154, 210, 130), 80%, rgb(110, 162, 85));
   border-radius: 50%;
   position: absolute;
   bottom: 5%;
