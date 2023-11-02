@@ -135,6 +135,11 @@ body {
   left: 20%;
 }
 
+.frog__body, .frog__eyeLid, .frog__backLeg {
+  border-radius: 50%;
+  background: rgb(24, 108, 24);
+}
+
 .frog {
   width: 100%;
   height: 100%;
@@ -146,15 +151,11 @@ body {
 .frog__body {
   height: 16rem;
   width: 25rem;
-  background: rgb(24, 108, 24);
-  border-radius: 50%;
   position: relative;
 }
 .frog__eyeLid {
   height: 7rem;
   width: 7rem;
-  border-radius: 50%;
-  background: rgb(24, 108, 24);
   position: absolute;
   top: -10%;
   display: flex;
@@ -213,8 +214,6 @@ body {
 .frog__backLeg {
   height: 13rem;
   width: 6rem;
-  background: rgb(20, 90, 20);
-  border-radius: 50%;
   position: absolute;
   top: 35%;
 }

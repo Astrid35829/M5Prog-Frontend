@@ -1,5 +1,6 @@
 @use '../../abstract/colors';
 @use '../../abstract/mixins';
+@use '../../abstract/extends';
 
 .frog{
     width: 100%;
@@ -10,16 +11,14 @@
     &__body{
         height: 16rem;
         width: 25rem;
-        background: colors.$frog__body;
-        border-radius: 50%;
+        @extend %borderbackground;
         position: relative;
     }
 
     &__eyeLid{
         height: 7rem;
         width: 7rem;
-        border-radius: 50%;
-        background: colors.$frog__body;
+        @extend %borderbackground;
         position: absolute;
         top: -10%;
         @include mixins.flexCenter;
@@ -82,8 +81,7 @@
     &__backLeg{
         height: 13rem;
         width: 6rem;
-        background: colors.$frog__backLeg;
-        border-radius: 50%;
+        @extend %borderbackground;
         position: absolute;
         top: 35%;
 

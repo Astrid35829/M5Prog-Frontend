@@ -1,0 +1,6 @@
+@use 'colors';
+
+%borderbackground{
+    border-radius: 50%;
+    background: colors.$frog__body;
+}
